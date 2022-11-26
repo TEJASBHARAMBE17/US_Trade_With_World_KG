@@ -1,0 +1,12 @@
+[
+    "Who is Shaka Khan?",
+    {
+        "entities": [
+            [
+                7,
+                17,
+                "PERSON"
+            ]
+        ]
+    }
+]
