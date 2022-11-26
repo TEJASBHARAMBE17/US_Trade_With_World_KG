@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import plotly.figure_factory as ff
 
+from VizApp import *
+
 tab1, tab2, tab3, tab4 = st.tabs(
     [
         "Overview",
@@ -17,23 +19,33 @@ with tab1:
 with tab2:
     st.header("Data viz with recommendation system")
 
+    country_dict = pd.read_csv('../data/country_codes.csv').set_index('name').T.to_dict('list')
+    df_trades = pd.read_csv('../data/trades_v3.csv')
+
     with st.form("my_form"):
 
         counter_country = st.selectbox(
-            "Counter Country", ("China", "South Korea", "India")
+            "Counter Country", [x.upper() for x in list(country_dict.keys())]
         )
+        country_name = counter_country
 
         start_year, end_year = st.select_slider(
             "Select Year",
-            options=[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-            value=(2010, 2018),
+            options=[i for i in range(2010, 2021, 1)],
+            value=(2010, 2018)
         )
 
-        product_selected = st.selectbox("Product", ("Rice", "Mobile", "Books"))
+        product_selected = st.selectbox("Product", df_trades['section_name'])
 
         submitted = st.form_submit_button("Submit")
         if submitted:
-            st.write(counter_country, start_year, end_year, product_selected)
+            counter_country = country_dict[counter_country.lower()][0].lower()
+            start_year = start_year
+            end_year = end_year
+            product_selected = product_selected
+            # st.write(counter_country, start_year, end_year, product_selected)
+    
+    run_visualization(country_name, counter_country, start_year, end_year, product_selected)
 
 
 with tab3:
@@ -41,3 +53,6 @@ with tab3:
 
 with tab4:
     st.header("Prediction of world trade using KG")
+
+
+
