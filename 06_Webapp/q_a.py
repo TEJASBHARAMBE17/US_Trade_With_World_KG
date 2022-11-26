@@ -271,7 +271,7 @@ def generate_country_trades(buyer, processed_year, app, dict_country, dict_count
 def question_answer(question, app, dict_country, dict_country_rev):
     gpe, date, nsubj, dobj = extract_entities(question)
     # print("\n",gpe,date,nsubj,dobj)
-    products = pd.read_csv("products.csv")
+    products = pd.read_csv("../data/products.csv")
     truth_product_list = list(products["section_name"].unique())
     question_dict = dict()
     # st.warning("Peforming the following step: Entity Recognition")
@@ -381,7 +381,7 @@ def question_answer(question, app, dict_country, dict_country_rev):
 
 
 def get_country_dict():
-    country_codes = pd.read_csv("country_codes.csv")
+    country_codes = pd.read_csv("../data/country_codes.csv")
     df2 = pd.DataFrame(
         {
             "iso_3": [

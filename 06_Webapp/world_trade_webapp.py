@@ -47,10 +47,9 @@ with tab2:
             end_year = end_year
             product_selected = product_selected
             # st.write(counter_country, start_year, end_year, product_selected)
-
-    run_visualization(
-        country_name, counter_country, start_year, end_year, product_selected
-    )
+            run_visualization(
+                country_name, counter_country, start_year, end_year, product_selected
+            )
 
 
 with tab3:
