@@ -2,18 +2,22 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.figure_factory as ff
+import streamlit.components.v1 as components
+
+# embed streamlit docs in a streamlit app
 
 from VizApp import *
 from q_a import *
 
 st.set_page_config(layout="wide")
 
-tab1, tab2, tab3, tab4 = st.tabs(
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
     [
         "Overview",
         "Data viz with recommendation system",
         "Q&A with KG",
         "Prediction of world trade using KG",
+        "KG Display",
     ]
 )
 with tab1:
@@ -29,18 +33,29 @@ with tab2:
 
     with st.form("my_form"):
 
-        counter_country = st.selectbox(
-            "Counter Country", [x.upper() for x in list(country_dict.keys())]
-        )
-        country_name = counter_country
+        col1, col2, col3, col4 = st.columns(4)
 
-        start_year, end_year = st.select_slider(
-            "Select Year", options=[i for i in range(2010, 2021, 1)], value=(2010, 2018)
-        )
+        with col1:
+            counter_country = st.selectbox(
+                "Counter Country", [x.upper() for x in list(country_dict.keys())]
+            )
+            country_name = counter_country
 
-        product_selected = st.selectbox("Product", df_trades["section_name"])
+        with col2:
+            start_year, end_year = st.select_slider(
+                "Select Year",
+                options=[i for i in range(2010, 2021, 1)],
+                value=(2010, 2018),
+            )
 
-        submitted = st.form_submit_button("Submit")
+        with col3:
+            product_selected = st.selectbox("Product", df_trades["section_name"])
+
+        with col4:
+            st.write("")
+            st.write("")
+            submitted = st.form_submit_button("Submit")
+
         if submitted:
             counter_country = country_dict[counter_country.lower()][0].lower()
             start_year = start_year
@@ -84,6 +99,13 @@ with tab3:
                 + ":confetti_ball:"
             )
             st.success("**Answer with scores:** ")
-            st.write(ans)
+            st.table(ans)
 with tab4:
     st.header("Prediction of world trade using KG")
+
+with tab5:
+    st.header("Neo4j graph")
+    components.iframe(
+        "https://browser.neo4j.io/?connectURL=neo4j%2Bs%3A%2F%2Fneo4j%4050728551.databases.neo4j.io%2F&_ga=2.81391250.408191067.1668294782-2032509330.1661934579",
+        height=600,
+    )
