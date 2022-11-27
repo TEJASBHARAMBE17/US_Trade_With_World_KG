@@ -50,7 +50,7 @@ with tab2:
             )
 
         with col3:
-            product_selected = st.selectbox("Product", df_trades["section_name"])
+            product_selected = st.selectbox("Product", df_trades["section_name"].unique())
 
         with col4:
             st.write("")
