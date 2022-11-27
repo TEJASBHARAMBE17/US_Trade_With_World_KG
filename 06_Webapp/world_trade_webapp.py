@@ -8,6 +8,7 @@ import streamlit.components.v1 as components
 
 from VizApp import *
 from q_a import *
+from prediction import *
 
 st.set_page_config(layout="wide")
 
@@ -29,9 +30,9 @@ with tab2:
     country_dict = (
         pd.read_csv("../data/country_codes.csv").set_index("name").T.to_dict("list")
     )
-    df_trades = pd.read_csv("../data/trades_v3.csv")
+    df_trades = pd.read_csv("../data/trades_v3_combined.csv")
 
-    with st.form("my_form"):
+    with st.form("form_visualization"):
 
         col1, col2, col3, col4 = st.columns(4)
 
@@ -102,6 +103,35 @@ with tab3:
             st.table(ans)
 with tab4:
     st.header("Prediction of world trade using KG")
+    df_fta = pd.read_csv("../data/fta_pop_gdp_cleaned_v2.csv")[['country', 'country_code', 'has_fta']]
+    df_fta['country'] = df_fta['country'].map(lambda x: x.upper())
+
+    with st.form("form_prediction"):
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            country_id = st.selectbox(
+                "Counter Country", df_fta[df_fta.apply(lambda x: False if x['has_fta'] or x['country_code']=='USA' else True, axis=1)]['country'].map(lambda x: x.upper())
+            )
+            counter_country = country_id
+            country_id = df_fta.reset_index(drop=True).set_index("country").T.to_dict("list")[country_id][0].lower()
+
+        with col2:
+            fta_year = st.select_slider(
+                "Select Year",
+                options=[i for i in range(2010, 2021, 1)],
+                value=2015
+            )
+
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            country_id = country_id
+            fta_year = fta_year
+
+            df_test, X_test = get_test_data(country_id, fta_year)
+            estimator = pickle.load(open('../data/rf_2211261626.pkl','rb'))
+            show_prediction(df_test, estimator.predict(X_test), counter_country, fta_year)
 
 with tab5:
     st.header("Neo4j graph")
