@@ -128,8 +128,6 @@ def get_test_data(country_id, fta_year):
     return df_test, X_test
 
 def show_prediction(df, pred, counter_country, fta_year):
-    st.write('Prediction of Trade Value Change according to the year of FTA in-force')
-
     full = df[['seller_usa', 'exports_year', 'trade_value']].copy()
     full['pred'] = pred
     full['pred'] = full.apply(lambda x: x['pred'] if x['exports_year']>=fta_year else x['trade_value'], axis=1)
@@ -149,6 +147,8 @@ def show_prediction(df, pred, counter_country, fta_year):
         st.write('Recommendation for USA: FTA with ' + counter_country)
     else:
         st.write('Recommendation for USA: No FTA with ' + counter_country)
+    st.write('')
+    st.write(f'What if FTA has been in force between USA and {counter_country} since {fta_year}')
 
     fig = px.line(result[result['seller_usa']==1], x='exports_year', y='trade_value', color='status', title='USA sells '+counter_country.upper()+' buys')
     st.plotly_chart(fig, use_container_width=True)

@@ -68,8 +68,8 @@ with tab2:
 
 
 with tab3:
-    st.header("Q&A with the world trade KG")
-    st.write("Methodology to answer the questions")
+    st.header("Q&A with the World Trade KG")
+    st.write("Methodology to Answer the Questions")
     st.markdown("**Template Questions:**")
     st.warning(
         """\n
@@ -118,7 +118,7 @@ with tab4:
 
         with col2:
             fta_year = st.select_slider(
-                "Select Year",
+                "Select FTA Year to predict trade value change",
                 options=[i for i in range(2010, 2021, 1)],
                 value=2015
             )
