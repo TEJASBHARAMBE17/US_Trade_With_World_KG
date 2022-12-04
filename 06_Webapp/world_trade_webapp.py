@@ -63,7 +63,9 @@ with tab2:
             )
 
         with col3:
-            product_selected = st.selectbox("Product", df_trades["section_name"])
+            product_selected = st.selectbox(
+                "Product", df_trades["section_name"].unique()
+            )
 
         with col4:
             st.write("")
@@ -75,7 +77,6 @@ with tab2:
             start_year = start_year
             end_year = end_year
             product_selected = product_selected
-            # st.write(counter_country, start_year, end_year, product_selected)
             run_visualization(
                 country_name, counter_country, start_year, end_year, product_selected
             )
@@ -83,7 +84,7 @@ with tab2:
 
 with tab3:
     st.header("Q&A with the World Trade KG")
-    st.write("Methodology to answer the questions")
+    st.write("Methodology to Answer the Questions")
     st.markdown("**Template Questions:**")
     st.warning(
         """\n
@@ -147,7 +148,9 @@ with tab4:
 
         with col2:
             fta_year = st.select_slider(
-                "Select Year", options=[i for i in range(2010, 2021, 1)], value=2015
+                "Select FTA Year to Predict Trade Value Change",
+                options=[i for i in range(2010, 2021, 1)],
+                value=2015,
             )
 
         submitted = st.form_submit_button("Submit")
@@ -155,11 +158,45 @@ with tab4:
             country_id = country_id
             fta_year = fta_year
 
-            df_test, X_test = get_test_data(country_id, fta_year)
             estimator = pickle.load(open("../data/rf_2211261626.pkl", "rb"))
+
+            df_test1, X_test1 = get_test_data(country_id, fta_year)
             show_prediction(
-                df_test, estimator.predict(X_test), counter_country, fta_year
+                df_test1, estimator.predict(X_test1), counter_country, fta_year
             )
+
+            df_test2, X_test2 = make_test_X(country_id)
+            df_addition = pd.concat(
+                [
+                    df_test1[
+                        df_test1.apply(
+                            lambda x: True
+                            if x["seller_usa"] == 0
+                            and x["exports_year"] == df_test1["exports_year"].max()
+                            else False,
+                            axis=1,
+                        )
+                    ],
+                    df_test1[
+                        df_test1.apply(
+                            lambda x: True
+                            if x["seller_usa"] == 1
+                            and x["exports_year"] == df_test1["exports_year"].max()
+                            else False,
+                            axis=1,
+                        )
+                    ],
+                ],
+                axis=0,
+            )
+            show_later_years_prediction(
+                df_test1,
+                df_test2,
+                df_addition,
+                estimator.predict(X_test2),
+                counter_country,
+            )
+
 
 with tab5:
     st.header("Neo4j graph")
