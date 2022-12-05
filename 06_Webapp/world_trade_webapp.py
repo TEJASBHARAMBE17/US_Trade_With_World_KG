@@ -14,7 +14,7 @@ from prediction import *
 
 st.set_page_config(layout="wide")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(
+tab1, tab3, tab2, tab4, tab5 = st.tabs(
     [
         "Overview",
         "Data Visualization",
@@ -37,11 +37,11 @@ with tab1:
 
     col1, col2, col3, col4 = st.columns(4)
 
-    with col1:
+    with col2:
         st.markdown("**Data Visualization**")
         st.image("../data/data_viz_img.png")
 
-    with col2:
+    with col1:
         st.markdown("**Q&A with KG**")
         st.image("../data/q_a_img.png")
 
@@ -72,7 +72,7 @@ with tab1:
     )
 
 
-with tab2:
+with tab3:
     st.header("Data Visualization")
 
     country_dict = (
@@ -116,7 +116,7 @@ with tab2:
             )
 
 
-with tab3:
+with tab2:
     st.header("Q&A with the World Trade KG")
     st.write("Methodology to Answer the Questions")
     st.markdown("**Template Questions:**")
