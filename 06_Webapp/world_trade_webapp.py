@@ -206,7 +206,7 @@ with tab4:
                         df_test1.apply(
                             lambda x: True
                             if x["seller_usa"] == 0
-                            and x["exports_year"] == df_test1["exports_year"].max()
+                            and x["Trade Year"] == df_test1["Trade Year"].max()
                             else False,
                             axis=1,
                         )
@@ -215,7 +215,7 @@ with tab4:
                         df_test1.apply(
                             lambda x: True
                             if x["seller_usa"] == 1
-                            and x["exports_year"] == df_test1["exports_year"].max()
+                            and x["Trade Year"] == df_test1["Trade Year"].max()
                             else False,
                             axis=1,
                         )
