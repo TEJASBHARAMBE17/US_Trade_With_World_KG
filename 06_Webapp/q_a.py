@@ -98,47 +98,47 @@ def get_gdp_details(buyer, processed_year, app, dict_country, dict_country_rev):
             + str(text["Population"])
             + ". "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2020"])
             + " in 2020 "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2019"])
             + " in 2019. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2018"])
             + " in 2018. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2017"])
             + " in 2017. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2016"])
             + " in 2016. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2015"])
             + " in 2015. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2014"])
             + " in 2014. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2013"])
             + " in 2013. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2012"])
             + " in 2012. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2011"])
             + " in 2011. "
             + text["Name"]
-            + " had GDP of "
+            + " had GDP of $"
             + str(text["gdp_2010"])
             + " in 2010. "
         )
@@ -180,7 +180,7 @@ def generate_c2c_trades(
                 + text["Buyer"]
                 + " exported from "
                 + text["Seller"]
-                + " worth "
+                + " worth $"
                 + str(text["Worth"])
                 + " in "
                 + str(text["Year"])
@@ -200,7 +200,7 @@ def generate_c2c_trades(
                 + text["Product"]
                 + " from "
                 + text["Seller"]
-                + " worth "
+                + " worth $"
                 + str(text["Worth"])
                 + " in "
                 + str(text["Year"])
@@ -252,7 +252,7 @@ def generate_country_trades(buyer, processed_year, app, dict_country, dict_count
                 + text["Buyer"]
                 + " exported from "
                 + text["Seller"]
-                + " worth "
+                + " worth $"
                 + str(text["Worth"])
                 + " in "
                 + str(text["Year"])
