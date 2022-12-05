@@ -54,7 +54,7 @@ class DataLoader:
                     ]
                     for row in result
                 ],
-                columns=["trade_country", "seller_usa", "Trade Year", "trade_value"],
+                columns=["trade_country", "seller_usa", "Trade Year", "Trade Value"],
             )
             return df
         except ServiceUnavailable as exception:
@@ -106,7 +106,7 @@ class DataLoader:
                     "trade_country",
                     "seller_usa",
                     "Trade Year",
-                    "trade_value",
+                    "Trade Value",
                     "fta_inforce",
                 ],
             )
@@ -147,20 +147,20 @@ def get_test_data(country_id, fta_year):
 
 
 def show_prediction(df, pred, counter_country, fta_year):
-    full = df[["seller_usa", "Trade Year", "trade_value"]].copy()
+    full = df[["seller_usa", "Trade Year", "Trade Value"]].copy()
     full["pred"] = pred
     full["pred"] = full.apply(
-        lambda x: x["pred"] if x["Trade Year"] >= fta_year else x["trade_value"],
+        lambda x: x["pred"] if x["Trade Year"] >= fta_year else x["Trade Value"],
         axis=1,
     )
     full["status"] = "Non-FTA (history)"
-    result = full[["seller_usa", "Trade Year", "trade_value", "status"]]
+    result = full[["seller_usa", "Trade Year", "Trade Value", "status"]]
     full["status"] = "If FTA in Force (prediction)"
-    full["trade_value"] = full["pred"]
+    full["Trade Value"] = full["pred"]
     result = pd.concat(
-        [result, full[["seller_usa", "Trade Year", "trade_value", "status"]]], axis=0
+        [result, full[["seller_usa", "Trade Year", "Trade Value", "status"]]], axis=0
     )
-    result = result[result["trade_value"] != 0]
+    result = result[result["Trade Value"] != 0]
 
     us_sells_history = result[
         result.apply(
@@ -171,7 +171,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             else False,
             axis=1,
         )
-    ]["trade_value"].mean()
+    ]["Trade Value"].mean()
     us_sells_predict = result[
         result.apply(
             lambda x: True
@@ -181,7 +181,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             else False,
             axis=1,
         )
-    ]["trade_value"].mean()
+    ]["Trade Value"].mean()
     us_buys_history = result[
         result.apply(
             lambda x: True
@@ -191,7 +191,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             else False,
             axis=1,
         )
-    ]["trade_value"].mean()
+    ]["Trade Value"].mean()
     us_buys_predict = result[
         result.apply(
             lambda x: True
@@ -201,7 +201,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             else False,
             axis=1,
         )
-    ]["trade_value"].mean()
+    ]["Trade Value"].mean()
 
     if (us_sells_predict - us_sells_history) - (us_buys_predict - us_buys_history) > 0:
         st.write("Recommendation for USA: FTA with " + counter_country)
@@ -261,7 +261,7 @@ def make_test_X(country_id):
 def show_later_years_prediction(df_test, X_test, addition, pred, counter_country):
     st.write("Prediction of US Future Trade with " + counter_country)
 
-    X_test["trade_value"] = pred
+    X_test["Trade Value"] = pred
     X_test = pd.concat([X_test, addition], axis=0)
     df_test["History"] = "History"
     X_test["History"] = "Prediction"
@@ -272,7 +272,7 @@ def show_later_years_prediction(df_test, X_test, addition, pred, counter_country
     fig = px.line(
         df[df["seller_usa"] == 1],
         x="Trade Year",
-        y="trade_value",
+        y="Trade Value",
         color="History",
         title="USA sells " + counter_country.upper() + " buys",
     )
@@ -283,7 +283,7 @@ def show_later_years_prediction(df_test, X_test, addition, pred, counter_country
     fig = px.line(
         df[df["seller_usa"] == 0],
         x="Trade Year",
-        y="trade_value",
+        y="Trade Value",
         color="History",
         title="USA buys " + counter_country.upper() + " sells",
     )
