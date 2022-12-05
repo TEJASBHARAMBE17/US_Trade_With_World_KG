@@ -14,13 +14,13 @@ from prediction import *
 
 st.set_page_config(layout="wide")
 
-tab1, tab3, tab2, tab4, tab5 = st.tabs(
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
     [
         "Overview",
+        "Neo4j Graph",
         "Q&A with KG",
         "Data Visualization",
         "Prediction & Recommendation",
-        "Neo4j Graph",
     ]
 )
 with tab1:
@@ -37,21 +37,21 @@ with tab1:
 
     col1, col2, col3, col4 = st.columns(4)
 
-    with col2:
-        st.markdown("**Data Visualization**")
-        st.image("../data/data_viz_img.png")
-
     with col1:
+        st.markdown("**Neo4j Graph**")
+        st.image("../data/neo4j_img.png")
+
+    with col2:
         st.markdown("**Q&A with KG**")
         st.image("../data/q_a_img.png")
 
     with col3:
-        st.markdown("**Prediction & Recommendation**")
-        st.image("../data/pred_img.png")
+        st.markdown("**Data Visualization**")
+        st.image("../data/data_viz_img.png")
 
     with col4:
-        st.markdown("**Neo4j Graph**")
-        st.image("../data/neo4j_img.png")
+        st.markdown("**Prediction & Recommendation**")
+        st.image("../data/pred_img.png")
 
     # image = Image.open("../data/globe2.jpeg")
     # st.image(image, caption="Ontology")
@@ -72,7 +72,7 @@ with tab1:
     )
 
 
-with tab3:
+with tab4:
     st.header("Data Visualization")
 
     country_dict = (
@@ -116,7 +116,7 @@ with tab3:
             )
 
 
-with tab2:
+with tab3:
     st.header("Q&A with the World Trade KG")
     st.write("Methodology to Answer the Questions")
     st.markdown("**Template Questions:**")
@@ -149,7 +149,7 @@ with tab2:
             )
             st.success("**Answer with scores:** ")
             st.table(ans)
-with tab4:
+with tab5:
     st.header("Prediction of world trade using KG")
     df_fta = pd.read_csv("../data/fta_pop_gdp_cleaned_v2.csv")[
         ["country", "country_code", "has_fta"]
@@ -232,7 +232,7 @@ with tab4:
             )
 
 
-with tab5:
+with tab2:
     st.header("Neo4j graph")
     components.iframe(
         "https://browser.neo4j.io/?connectURL=neo4j%2Bs%3A%2F%2Fneo4j%4050728551.databases.neo4j.io%2F&_ga=2.81391250.408191067.1668294782-2032509330.1661934579",
