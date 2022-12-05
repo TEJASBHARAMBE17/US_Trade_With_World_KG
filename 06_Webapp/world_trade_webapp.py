@@ -236,7 +236,7 @@ with tab5:
     st.header("Neo4j graph")
     components.iframe(
         "https://browser.neo4j.io/?connectURL=neo4j%2Bs%3A%2F%2Fneo4j%4050728551.databases.neo4j.io%2F&_ga=2.81391250.408191067.1668294782-2032509330.1661934579",
-        height=600,
+        height=800,
     )
     image = Image.open("../data/ontology.png")
 
