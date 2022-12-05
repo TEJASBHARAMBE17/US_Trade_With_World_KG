@@ -1,0 +1,24 @@
+Date: Fri, 21 Oct 2022 02:07:42 GMT
+Content-Type: text/html; charset=utf-8
+X-Dns-Prefetch-Control: off
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Language: en
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+X-Cache-Status: MISS
+X-Cache-Key: GET/en/profile/bilateral-country/vnm/partner/gbr
+Cache-Control: max-age=14400
+Cf-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7G%2FgJcF%2FU81%2BMZKZZZxNI3%2F9JyNebUX5GQORUUBEw25ZCtaIa9TTzNegQf0B2ekS%2FK6JD%2BYqLvvwHNkuuIUzbwZqogntHf3rSbRixCXGK4Pr2eOgJv9zR6uSXaE%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 75d670ddb9747bd1-LAX
+Content-Encoding: gzip
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

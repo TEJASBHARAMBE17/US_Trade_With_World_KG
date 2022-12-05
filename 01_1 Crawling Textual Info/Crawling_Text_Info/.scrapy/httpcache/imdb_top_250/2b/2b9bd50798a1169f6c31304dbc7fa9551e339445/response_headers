@@ -1,0 +1,16 @@
+Content-Length: 2497
+Content-Type: text/html
+Server: Server
+Date: Thu, 08 Sep 2022 05:57:22 GMT
+X-Amz-Rid: 0PTK2M9AAWFT7BVE4CAY
+Vary: Content-Type,Accept-Encoding,User-Agent
+Last-Modified: Fri, 19 Aug 2022 17:17:49 GMT
+Etag: "1fee-5e69b46ff2940-gzip"
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+X-Cache: Error from cloudfront
+Via: 1.1 b180bc4adf0ab139e816fdb05c499c58.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LAX50-P1
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: dQg_0SSlZ6IV95W6mx-Xz4tNdQQWjyc_V4xYVTtN5DgH-u13kVrK8g==
