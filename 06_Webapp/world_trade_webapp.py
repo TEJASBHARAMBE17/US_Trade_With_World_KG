@@ -123,7 +123,7 @@ with tab3:
     st.info(
         """\n
         What was the GDP of United States in 2018?\n
-        What products did US export from China by 1st jan 2020?\n
+        What products did US import from China by 1st jan 2020?\n
         What does Machine contain?\n
         From whom did U.S export in 2020?\n
         With whom does U.S has FTA with?\n
