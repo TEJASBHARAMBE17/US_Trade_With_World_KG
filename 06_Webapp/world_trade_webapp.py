@@ -17,8 +17,8 @@ st.set_page_config(layout="wide")
 tab1, tab3, tab2, tab4, tab5 = st.tabs(
     [
         "Overview",
-        "Data Visualization",
         "Q&A with KG",
+        "Data Visualization",
         "Prediction & Recommendation",
         "Neo4j Graph",
     ]
