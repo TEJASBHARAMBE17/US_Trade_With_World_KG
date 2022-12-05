@@ -1,0 +1,668 @@
+﻿exports_from,exports_to,exports_year,section_id,section_name,trade_value,trade_id
+usa,chn,2011,1,Animal Products,2415029224,trade_b_1
+usa,chn,2011,2,Vegetable Products,12407174436,trade_b_2
+usa,chn,2011,3,Animal and Vegetable Bi-Products,236810158,trade_b_3
+usa,chn,2011,4,Foodstuffs,1350851209,trade_b_4
+usa,chn,2011,5,Mineral Products,3880288714,trade_b_5
+usa,chn,2011,6,Chemical Products,9590759827,trade_b_6
+usa,chn,2011,7,Plastics and Rubbers,6122475378,trade_b_7
+usa,chn,2011,8,Animal Hides,1131610723,trade_b_8
+usa,chn,2011,9,Wood Products,1935507843,trade_b_9
+usa,chn,2011,10,Paper Goods,4768592992,trade_b_10
+usa,chn,2011,11,Textiles,3764075795,trade_b_11
+usa,chn,2011,12,Footwear and Headwear,73536928,trade_b_12
+usa,chn,2011,13,Stone And Glass,654208283,trade_b_13
+usa,chn,2011,14,Precious Metals,935801533,trade_b_14
+usa,chn,2011,15,Metals,8861780867,trade_b_15
+usa,chn,2011,16,Machines,23717416554,trade_b_16
+usa,chn,2011,17,Transportation,11835015089,trade_b_17
+usa,chn,2011,18,Instruments,5846216922,trade_b_18
+usa,chn,2011,19,Weapons,1161093,trade_b_19
+usa,chn,2011,20,Miscellaneous,890929719,trade_b_20
+usa,chn,2011,21,Arts and Antiques,67536622,trade_b_21
+usa,chn,2012,1,Animal Products,2613329061,trade_b_22
+usa,chn,2012,2,Vegetable Products,17288313638,trade_b_23
+usa,chn,2012,3,Animal and Vegetable Bi-Products,374531938,trade_b_24
+usa,chn,2012,4,Foodstuffs,1827023802,trade_b_25
+usa,chn,2012,5,Mineral Products,4343374429,trade_b_26
+usa,chn,2012,6,Chemical Products,9256490911,trade_b_27
+usa,chn,2012,7,Plastics and Rubbers,5791512028,trade_b_28
+usa,chn,2012,8,Animal Hides,1304387857,trade_b_29
+usa,chn,2012,9,Wood Products,1642973158,trade_b_30
+usa,chn,2012,10,Paper Goods,4677171359,trade_b_31
+usa,chn,2012,11,Textiles,4636322901,trade_b_32
+usa,chn,2012,12,Footwear and Headwear,63904816,trade_b_33
+usa,chn,2012,13,Stone And Glass,513725439,trade_b_34
+usa,chn,2012,14,Precious Metals,441679057,trade_b_35
+usa,chn,2012,15,Metals,9335026587,trade_b_36
+usa,chn,2012,16,Machines,21988312358,trade_b_37
+usa,chn,2012,17,Transportation,14413289426,trade_b_38
+usa,chn,2012,18,Instruments,7696084433,trade_b_39
+usa,chn,2012,19,Weapons,761761,trade_b_40
+usa,chn,2012,20,Miscellaneous,605673116,trade_b_41
+usa,chn,2012,21,Arts and Antiques,61497816,trade_b_42
+usa,chn,2013,1,Animal Products,2945323739,trade_b_43
+usa,chn,2013,2,Vegetable Products,16603967589,trade_b_44
+usa,chn,2013,3,Animal and Vegetable Bi-Products,203264173,trade_b_45
+usa,chn,2013,4,Foodstuffs,2690972169,trade_b_46
+usa,chn,2013,5,Mineral Products,4541120650,trade_b_47
+usa,chn,2013,6,Chemical Products,10146598369,trade_b_48
+usa,chn,2013,7,Plastics and Rubbers,5759864685,trade_b_49
+usa,chn,2013,8,Animal Hides,1609652331,trade_b_50
+usa,chn,2013,9,Wood Products,2357923332,trade_b_51
+usa,chn,2013,10,Paper Goods,4581905791,trade_b_52
+usa,chn,2013,11,Textiles,3503183550,trade_b_53
+usa,chn,2013,12,Footwear and Headwear,67937717,trade_b_54
+usa,chn,2013,13,Stone And Glass,640415881,trade_b_55
+usa,chn,2013,14,Precious Metals,1094159260,trade_b_56
+usa,chn,2013,15,Metals,8955460212,trade_b_57
+usa,chn,2013,16,Machines,23445865941,trade_b_58
+usa,chn,2013,17,Transportation,24122341298,trade_b_59
+usa,chn,2013,18,Instruments,8664603073,trade_b_60
+usa,chn,2013,19,Weapons,1852026,trade_b_61
+usa,chn,2013,20,Miscellaneous,547622044,trade_b_62
+usa,chn,2013,21,Arts and Antiques,72608984,trade_b_63
+usa,chn,2014,1,Animal Products,2652492512,trade_b_64
+usa,chn,2014,2,Vegetable Products,17359202660,trade_b_65
+usa,chn,2014,3,Animal and Vegetable Bi-Products,192534966,trade_b_66
+usa,chn,2014,4,Foodstuffs,2603587993,trade_b_67
+usa,chn,2014,5,Mineral Products,3514064307,trade_b_68
+usa,chn,2014,6,Chemical Products,10179790962,trade_b_69
+usa,chn,2014,7,Plastics and Rubbers,6056137178,trade_b_70
+usa,chn,2014,8,Animal Hides,1645177734,trade_b_71
+usa,chn,2014,9,Wood Products,2591056331,trade_b_72
+usa,chn,2014,10,Paper Goods,4346721006,trade_b_73
+usa,chn,2014,11,Textiles,2296419620,trade_b_74
+usa,chn,2014,12,Footwear and Headwear,70441005,trade_b_75
+usa,chn,2014,13,Stone And Glass,726017954,trade_b_76
+usa,chn,2014,14,Precious Metals,1092718838,trade_b_77
+usa,chn,2014,15,Metals,7750018741,trade_b_78
+usa,chn,2014,16,Machines,23513870717,trade_b_79
+usa,chn,2014,17,Transportation,28974089362,trade_b_80
+usa,chn,2014,18,Instruments,8848612089,trade_b_81
+usa,chn,2014,19,Weapons,952696,trade_b_82
+usa,chn,2014,20,Miscellaneous,473024634,trade_b_83
+usa,chn,2014,21,Arts and Antiques,126564773,trade_b_84
+usa,chn,2015,1,Animal Products,1948625620,trade_b_85
+usa,chn,2015,2,Vegetable Products,14297463165,trade_b_86
+usa,chn,2015,3,Animal and Vegetable Bi-Products,70201121,trade_b_87
+usa,chn,2015,4,Foodstuffs,3215053005,trade_b_88
+usa,chn,2015,5,Mineral Products,3481280060,trade_b_89
+usa,chn,2015,6,Chemical Products,10167038925,trade_b_90
+usa,chn,2015,7,Plastics and Rubbers,5653378229,trade_b_91
+usa,chn,2015,8,Animal Hides,1450426834,trade_b_92
+usa,chn,2015,9,Wood Products,2081755362,trade_b_93
+usa,chn,2015,10,Paper Goods,4389309313,trade_b_94
+usa,chn,2015,11,Textiles,1783146853,trade_b_95
+usa,chn,2015,12,Footwear and Headwear,98245814,trade_b_96
+usa,chn,2015,13,Stone And Glass,691892948,trade_b_97
+usa,chn,2015,14,Precious Metals,837165774,trade_b_98
+usa,chn,2015,15,Metals,5876316860,trade_b_99
+usa,chn,2015,16,Machines,24561780258,trade_b_100
+usa,chn,2015,17,Transportation,27279650635,trade_b_101
+usa,chn,2015,18,Instruments,9582068353,trade_b_102
+usa,chn,2015,19,Weapons,1579614,trade_b_103
+usa,chn,2015,20,Miscellaneous,541301748,trade_b_104
+usa,chn,2015,21,Arts and Antiques,96091592,trade_b_105
+usa,chn,2016,1,Animal Products,2073368802,trade_b_106
+usa,chn,2016,2,Vegetable Products,16767804742,trade_b_107
+usa,chn,2016,3,Animal and Vegetable Bi-Products,157716675,trade_b_108
+usa,chn,2016,4,Foodstuffs,2197167290,trade_b_109
+usa,chn,2016,5,Mineral Products,3775731742,trade_b_110
+usa,chn,2016,6,Chemical Products,9771493496,trade_b_111
+usa,chn,2016,7,Plastics and Rubbers,5679120242,trade_b_112
+usa,chn,2016,8,Animal Hides,1304341441,trade_b_113
+usa,chn,2016,9,Wood Products,2545282614,trade_b_114
+usa,chn,2016,10,Paper Goods,4271675731,trade_b_115
+usa,chn,2016,11,Textiles,1387923847,trade_b_116
+usa,chn,2016,12,Footwear and Headwear,103737200,trade_b_117
+usa,chn,2016,13,Stone And Glass,727355007,trade_b_118
+usa,chn,2016,14,Precious Metals,730140623,trade_b_119
+usa,chn,2016,15,Metals,5150929017,trade_b_120
+usa,chn,2016,16,Machines,22072276183,trade_b_121
+usa,chn,2016,17,Transportation,24589148460,trade_b_122
+usa,chn,2016,18,Instruments,10378678414,trade_b_123
+usa,chn,2016,19,Weapons,401427,trade_b_124
+usa,chn,2016,20,Miscellaneous,556298960,trade_b_125
+usa,chn,2016,21,Arts and Antiques,79741401,trade_b_126
+usa,chn,2017,1,Animal Products,2418683549,trade_b_127
+usa,chn,2017,2,Vegetable Products,15185285928,trade_b_128
+usa,chn,2017,3,Animal and Vegetable Bi-Products,80059569,trade_b_129
+usa,chn,2017,4,Foodstuffs,1497329040,trade_b_130
+usa,chn,2017,5,Mineral Products,9780059157,trade_b_131
+usa,chn,2017,6,Chemical Products,12074642673,trade_b_132
+usa,chn,2017,7,Plastics and Rubbers,6510996659,trade_b_133
+usa,chn,2017,8,Animal Hides,1269413937,trade_b_134
+usa,chn,2017,9,Wood Products,2815134288,trade_b_135
+usa,chn,2017,10,Paper Goods,4353620709,trade_b_136
+usa,chn,2017,11,Textiles,1808472021,trade_b_137
+usa,chn,2017,12,Footwear and Headwear,121187874,trade_b_138
+usa,chn,2017,13,Stone And Glass,817703967,trade_b_139
+usa,chn,2017,14,Precious Metals,1177740859,trade_b_140
+usa,chn,2017,15,Metals,5945530401,trade_b_141
+usa,chn,2017,16,Machines,22787375006,trade_b_142
+usa,chn,2017,17,Transportation,27183467950,trade_b_143
+usa,chn,2017,18,Instruments,11046408643,trade_b_144
+usa,chn,2017,19,Weapons,1584335,trade_b_145
+usa,chn,2017,20,Miscellaneous,538206870,trade_b_146
+usa,chn,2017,21,Arts and Antiques,86252714,trade_b_147
+usa,chn,2018,1,Animal Products,2055774762,trade_b_148
+usa,chn,2018,2,Vegetable Products,5087784396,trade_b_149
+usa,chn,2018,3,Animal and Vegetable Bi-Products,66343087,trade_b_150
+usa,chn,2018,4,Foodstuffs,1654452406,trade_b_151
+usa,chn,2018,5,Mineral Products,9685507328,trade_b_152
+usa,chn,2018,6,Chemical Products,12462879753,trade_b_153
+usa,chn,2018,7,Plastics and Rubbers,6538122418,trade_b_154
+usa,chn,2018,8,Animal Hides,896683250,trade_b_155
+usa,chn,2018,9,Wood Products,2153550262,trade_b_156
+usa,chn,2018,10,Paper Goods,4017856285,trade_b_157
+usa,chn,2018,11,Textiles,1720413909,trade_b_158
+usa,chn,2018,12,Footwear and Headwear,167351221,trade_b_159
+usa,chn,2018,13,Stone And Glass,826997104,trade_b_160
+usa,chn,2018,14,Precious Metals,1634783136,trade_b_161
+usa,chn,2018,15,Metals,4828640623,trade_b_162
+usa,chn,2018,16,Machines,24157414023,trade_b_163
+usa,chn,2018,17,Transportation,26169324452,trade_b_164
+usa,chn,2018,18,Instruments,12983124492,trade_b_165
+usa,chn,2018,19,Weapons,925980,trade_b_166
+usa,chn,2018,20,Miscellaneous,596911117,trade_b_167
+usa,chn,2018,21,Arts and Antiques,104464152,trade_b_168
+usa,chn,2019,1,Animal Products,2545759465,trade_b_169
+usa,chn,2019,2,Vegetable Products,9584340120,trade_b_170
+usa,chn,2019,3,Animal and Vegetable Bi-Products,50321042,trade_b_171
+usa,chn,2019,4,Foodstuffs,1226977371,trade_b_172
+usa,chn,2019,5,Mineral Products,4245548968,trade_b_173
+usa,chn,2019,6,Chemical Products,13181840362,trade_b_174
+usa,chn,2019,7,Plastics and Rubbers,5633483013,trade_b_175
+usa,chn,2019,8,Animal Hides,614130572,trade_b_176
+usa,chn,2019,9,Wood Products,1566305851,trade_b_177
+usa,chn,2019,10,Paper Goods,3168829588,trade_b_178
+usa,chn,2019,11,Textiles,1347098818,trade_b_179
+usa,chn,2019,12,Footwear and Headwear,282111522,trade_b_180
+usa,chn,2019,13,Stone And Glass,810452381,trade_b_181
+usa,chn,2019,14,Precious Metals,1131213962,trade_b_182
+usa,chn,2019,15,Metals,3093350324,trade_b_183
+usa,chn,2019,16,Machines,24678377842,trade_b_184
+usa,chn,2019,17,Transportation,16186667876,trade_b_185
+usa,chn,2019,18,Instruments,12861710005,trade_b_186
+usa,chn,2019,19,Weapons,928660,trade_b_187
+usa,chn,2019,20,Miscellaneous,531167903,trade_b_188
+usa,chn,2019,21,Arts and Antiques,181528596,trade_b_189
+usa,chn,2020,1,Animal Products,4476536420,trade_b_190
+usa,chn,2020,2,Vegetable Products,18954909468,trade_b_191
+usa,chn,2020,3,Animal and Vegetable Bi-Products,84037365,trade_b_192
+usa,chn,2020,4,Foodstuffs,1335211926,trade_b_193
+usa,chn,2020,5,Mineral Products,10826281821,trade_b_194
+usa,chn,2020,6,Chemical Products,14161906619,trade_b_195
+usa,chn,2020,7,Plastics and Rubbers,6044765517,trade_b_196
+usa,chn,2020,8,Animal Hides,537624202,trade_b_197
+usa,chn,2020,9,Wood Products,1559543679,trade_b_198
+usa,chn,2020,10,Paper Goods,3092311445,trade_b_199
+usa,chn,2020,11,Textiles,2431529961,trade_b_200
+usa,chn,2020,12,Footwear and Headwear,187431762,trade_b_201
+usa,chn,2020,13,Stone And Glass,826056967,trade_b_202
+usa,chn,2020,14,Precious Metals,2740798668,trade_b_203
+usa,chn,2020,15,Metals,2852419546,trade_b_204
+usa,chn,2020,16,Machines,26979071900,trade_b_205
+usa,chn,2020,17,Transportation,11133507646,trade_b_206
+usa,chn,2020,18,Instruments,13666245145,trade_b_207
+usa,chn,2020,19,Weapons,1169356,trade_b_208
+usa,chn,2020,20,Miscellaneous,380362554,trade_b_209
+usa,chn,2020,21,Arts and Antiques,91925143,trade_b_210
+usa,ind,2020,1,Animal Products,24248528,trade_b_211
+usa,ind,2020,2,Vegetable Products,1071204616,trade_b_212
+usa,ind,2020,3,Animal and Vegetable Bi-Products,55629238,trade_b_213
+usa,ind,2020,4,Foodstuffs,559217503,trade_b_214
+usa,ind,2020,5,Mineral Products,7672209876,trade_b_215
+usa,ind,2020,6,Chemical Products,3486256709,trade_b_216
+usa,ind,2020,7,Plastics and Rubbers,1091673751,trade_b_217
+usa,ind,2020,8,Animal Hides,14169487,trade_b_218
+usa,ind,2020,9,Wood Products,38829511,trade_b_219
+usa,ind,2020,10,Paper Goods,707737622,trade_b_220
+usa,ind,2020,11,Textiles,299972670,trade_b_221
+usa,ind,2020,12,Footwear and Headwear,3294473,trade_b_222
+usa,ind,2020,13,Stone And Glass,101419498,trade_b_223
+usa,ind,2020,14,Precious Metals,4363793202,trade_b_224
+usa,ind,2020,15,Metals,1325646965,trade_b_225
+usa,ind,2020,16,Machines,3500370239,trade_b_226
+usa,ind,2020,17,Transportation,977033897,trade_b_227
+usa,ind,2020,18,Instruments,1179263306,trade_b_228
+usa,ind,2020,19,Weapons,75472810,trade_b_229
+usa,ind,2020,20,Miscellaneous,61165813,trade_b_230
+usa,ind,2020,21,Arts and Antiques,27354890,trade_b_231
+usa,ind,2019,1,Animal Products,29655042,trade_b_232
+usa,ind,2019,2,Vegetable Products,977438410,trade_b_233
+usa,ind,2019,3,Animal and Vegetable Bi-Products,18118229,trade_b_234
+usa,ind,2019,4,Foodstuffs,654757163,trade_b_235
+usa,ind,2019,5,Mineral Products,8941306228,trade_b_236
+usa,ind,2019,6,Chemical Products,4032244520,trade_b_237
+usa,ind,2019,7,Plastics and Rubbers,1123719172,trade_b_238
+usa,ind,2019,8,Animal Hides,13817329,trade_b_239
+usa,ind,2019,9,Wood Products,55325021,trade_b_240
+usa,ind,2019,10,Paper Goods,941932420,trade_b_241
+usa,ind,2019,11,Textiles,774710008,trade_b_242
+usa,ind,2019,12,Footwear and Headwear,12407181,trade_b_243
+usa,ind,2019,13,Stone And Glass,164786413,trade_b_244
+usa,ind,2019,14,Precious Metals,6392998289,trade_b_245
+usa,ind,2019,15,Metals,1606748474,trade_b_246
+usa,ind,2019,16,Machines,5700195563,trade_b_247
+usa,ind,2019,17,Transportation,645167606,trade_b_248
+usa,ind,2019,18,Instruments,1551926084,trade_b_249
+usa,ind,2019,19,Weapons,152218787,trade_b_250
+usa,ind,2019,20,Miscellaneous,85384436,trade_b_251
+usa,ind,2019,21,Arts and Antiques,39504992,trade_b_252
+usa,ind,2018,1,Animal Products,41307124,trade_b_253
+usa,ind,2018,2,Vegetable Products,904677944,trade_b_254
+usa,ind,2018,3,Animal and Vegetable Bi-Products,17073281,trade_b_255
+usa,ind,2018,4,Foodstuffs,442913650,trade_b_256
+usa,ind,2018,5,Mineral Products,6842625911,trade_b_257
+usa,ind,2018,6,Chemical Products,3682406765,trade_b_258
+usa,ind,2018,7,Plastics and Rubbers,1077690728,trade_b_259
+usa,ind,2018,8,Animal Hides,22181294,trade_b_260
+usa,ind,2018,9,Wood Products,23493962,trade_b_261
+usa,ind,2018,10,Paper Goods,965265895,trade_b_262
+usa,ind,2018,11,Textiles,512905340,trade_b_263
+usa,ind,2018,12,Footwear and Headwear,6579057,trade_b_264
+usa,ind,2018,13,Stone And Glass,228623807,trade_b_265
+usa,ind,2018,14,Precious Metals,7680073351,trade_b_266
+usa,ind,2018,15,Metals,1466021736,trade_b_267
+usa,ind,2018,16,Machines,5022322218,trade_b_268
+usa,ind,2018,17,Transportation,1088102180,trade_b_269
+usa,ind,2018,18,Instruments,1553590332,trade_b_270
+usa,ind,2018,19,Weapons,7806572,trade_b_271
+usa,ind,2018,20,Miscellaneous,95101796,trade_b_272
+usa,ind,2018,21,Arts and Antiques,18751233,trade_b_273
+usa,ind,2017,1,Animal Products,35520002,trade_b_274
+usa,ind,2017,2,Vegetable Products,938946317,trade_b_275
+usa,ind,2017,3,Animal and Vegetable Bi-Products,11399980,trade_b_276
+usa,ind,2017,4,Foodstuffs,438762803,trade_b_277
+usa,ind,2017,5,Mineral Products,3775856863,trade_b_278
+usa,ind,2017,6,Chemical Products,2933652589,trade_b_279
+usa,ind,2017,7,Plastics and Rubbers,951230736,trade_b_280
+usa,ind,2017,8,Animal Hides,25705140,trade_b_281
+usa,ind,2017,9,Wood Products,32743274,trade_b_282
+usa,ind,2017,10,Paper Goods,767670290,trade_b_283
+usa,ind,2017,11,Textiles,604964996,trade_b_284
+usa,ind,2017,12,Footwear and Headwear,3783803,trade_b_285
+usa,ind,2017,13,Stone And Glass,207233598,trade_b_286
+usa,ind,2017,14,Precious Metals,6143200725,trade_b_287
+usa,ind,2017,15,Metals,983065734,trade_b_288
+usa,ind,2017,16,Machines,3911333770,trade_b_289
+usa,ind,2017,17,Transportation,1141797497,trade_b_290
+usa,ind,2017,18,Instruments,1418022358,trade_b_291
+usa,ind,2017,19,Weapons,44559841,trade_b_292
+usa,ind,2017,20,Miscellaneous,91934073,trade_b_293
+usa,ind,2017,21,Arts and Antiques,20088831,trade_b_294
+usa,ind,2016,1,Animal Products,54259175,trade_b_295
+usa,ind,2016,2,Vegetable Products,825853621,trade_b_296
+usa,ind,2016,3,Animal and Vegetable Bi-Products,14004232,trade_b_297
+usa,ind,2016,4,Foodstuffs,286314185,trade_b_298
+usa,ind,2016,5,Mineral Products,1398101559,trade_b_299
+usa,ind,2016,6,Chemical Products,2744289481,trade_b_300
+usa,ind,2016,7,Plastics and Rubbers,885402733,trade_b_301
+usa,ind,2016,8,Animal Hides,22828406,trade_b_302
+usa,ind,2016,9,Wood Products,32606380,trade_b_303
+usa,ind,2016,10,Paper Goods,705629299,trade_b_304
+usa,ind,2016,11,Textiles,435259201,trade_b_305
+usa,ind,2016,12,Footwear and Headwear,4058977,trade_b_306
+usa,ind,2016,13,Stone And Glass,187134240,trade_b_307
+usa,ind,2016,14,Precious Metals,6030348514,trade_b_308
+usa,ind,2016,15,Metals,959885552,trade_b_309
+usa,ind,2016,16,Machines,3728205566,trade_b_310
+usa,ind,2016,17,Transportation,673095231,trade_b_311
+usa,ind,2016,18,Instruments,1343833293,trade_b_312
+usa,ind,2016,19,Weapons,101209417,trade_b_313
+usa,ind,2016,20,Miscellaneous,84099247,trade_b_314
+usa,ind,2016,21,Arts and Antiques,35972461,trade_b_315
+usa,ind,2015,1,Animal Products,37148630,trade_b_316
+usa,ind,2015,2,Vegetable Products,903364807,trade_b_317
+usa,ind,2015,3,Animal and Vegetable Bi-Products,8518543,trade_b_318
+usa,ind,2015,4,Foodstuffs,202965162,trade_b_319
+usa,ind,2015,5,Mineral Products,1413065476,trade_b_320
+usa,ind,2015,6,Chemical Products,2745678976,trade_b_321
+usa,ind,2015,7,Plastics and Rubbers,794271603,trade_b_322
+usa,ind,2015,8,Animal Hides,20328140,trade_b_323
+usa,ind,2015,9,Wood Products,43277836,trade_b_324
+usa,ind,2015,10,Paper Goods,702180529,trade_b_325
+usa,ind,2015,11,Textiles,291460082,trade_b_326
+usa,ind,2015,12,Footwear and Headwear,5146685,trade_b_327
+usa,ind,2015,13,Stone And Glass,223946292,trade_b_328
+usa,ind,2015,14,Precious Metals,5865786984,trade_b_329
+usa,ind,2015,15,Metals,1072255090,trade_b_330
+usa,ind,2015,16,Machines,3664330453,trade_b_331
+usa,ind,2015,17,Transportation,1025565684,trade_b_332
+usa,ind,2015,18,Instruments,1307863413,trade_b_333
+usa,ind,2015,19,Weapons,13050379,trade_b_334
+usa,ind,2015,20,Miscellaneous,87057537,trade_b_335
+usa,ind,2015,21,Arts and Antiques,29567177,trade_b_336
+usa,ind,2014,1,Animal Products,30271637,trade_b_337
+usa,ind,2014,2,Vegetable Products,788912659,trade_b_338
+usa,ind,2014,3,Animal and Vegetable Bi-Products,9518486,trade_b_339
+usa,ind,2014,4,Foodstuffs,185655613,trade_b_340
+usa,ind,2014,5,Mineral Products,1986957123,trade_b_341
+usa,ind,2014,6,Chemical Products,2662051928,trade_b_342
+usa,ind,2014,7,Plastics and Rubbers,822210505,trade_b_343
+usa,ind,2014,8,Animal Hides,20094210,trade_b_344
+usa,ind,2014,9,Wood Products,67584545,trade_b_345
+usa,ind,2014,10,Paper Goods,855961958,trade_b_346
+usa,ind,2014,11,Textiles,279978434,trade_b_347
+usa,ind,2014,12,Footwear and Headwear,4920551,trade_b_348
+usa,ind,2014,13,Stone And Glass,161386757,trade_b_349
+usa,ind,2014,14,Precious Metals,5004743160,trade_b_350
+usa,ind,2014,15,Metals,942618577,trade_b_351
+usa,ind,2014,16,Machines,3660445493,trade_b_352
+usa,ind,2014,17,Transportation,1938398651,trade_b_353
+usa,ind,2014,18,Instruments,1287096241,trade_b_354
+usa,ind,2014,19,Weapons,31044466,trade_b_355
+usa,ind,2014,20,Miscellaneous,86964900,trade_b_356
+usa,ind,2014,21,Arts and Antiques,17054717,trade_b_357
+usa,ind,2013,1,Animal Products,23488068,trade_b_358
+usa,ind,2013,2,Vegetable Products,621998891,trade_b_359
+usa,ind,2013,3,Animal and Vegetable Bi-Products,37573595,trade_b_360
+usa,ind,2013,4,Foodstuffs,137186435,trade_b_361
+usa,ind,2013,5,Mineral Products,1788146770,trade_b_362
+usa,ind,2013,6,Chemical Products,2695932350,trade_b_363
+usa,ind,2013,7,Plastics and Rubbers,844450091,trade_b_364
+usa,ind,2013,8,Animal Hides,20275227,trade_b_365
+usa,ind,2013,9,Wood Products,50579657,trade_b_366
+usa,ind,2013,10,Paper Goods,749750218,trade_b_367
+usa,ind,2013,11,Textiles,274462307,trade_b_368
+usa,ind,2013,12,Footwear and Headwear,4302152,trade_b_369
+usa,ind,2013,13,Stone And Glass,141609572,trade_b_370
+usa,ind,2013,14,Precious Metals,4975318257,trade_b_371
+usa,ind,2013,15,Metals,893402469,trade_b_372
+usa,ind,2013,16,Machines,3701436178,trade_b_373
+usa,ind,2013,17,Transportation,2212971567,trade_b_374
+usa,ind,2013,18,Instruments,1290069533,trade_b_375
+usa,ind,2013,19,Weapons,27206513,trade_b_376
+usa,ind,2013,20,Miscellaneous,90418678,trade_b_377
+usa,ind,2013,21,Arts and Antiques,17954637,trade_b_378
+usa,ind,2012,1,Animal Products,18930826,trade_b_379
+usa,ind,2012,2,Vegetable Products,558833070,trade_b_380
+usa,ind,2012,3,Animal and Vegetable Bi-Products,93389024,trade_b_381
+usa,ind,2012,4,Foodstuffs,99798351,trade_b_382
+usa,ind,2012,5,Mineral Products,1873576131,trade_b_383
+usa,ind,2012,6,Chemical Products,3097366092,trade_b_384
+usa,ind,2012,7,Plastics and Rubbers,923733391,trade_b_385
+usa,ind,2012,8,Animal Hides,24050564,trade_b_386
+usa,ind,2012,9,Wood Products,45226266,trade_b_387
+usa,ind,2012,10,Paper Goods,740540153,trade_b_388
+usa,ind,2012,11,Textiles,259196278,trade_b_389
+usa,ind,2012,12,Footwear and Headwear,7600884,trade_b_390
+usa,ind,2012,13,Stone And Glass,126551669,trade_b_391
+usa,ind,2012,14,Precious Metals,5501999954,trade_b_392
+usa,ind,2012,15,Metals,1270344889,trade_b_393
+usa,ind,2012,16,Machines,4497058619,trade_b_394
+usa,ind,2012,17,Transportation,782969728,trade_b_395
+usa,ind,2012,18,Instruments,1249436030,trade_b_396
+usa,ind,2012,19,Weapons,16141668,trade_b_397
+usa,ind,2012,20,Miscellaneous,102761503,trade_b_398
+usa,ind,2012,21,Arts and Antiques,14036156,trade_b_399
+usa,ind,2011,1,Animal Products,16049413,trade_b_400
+usa,ind,2011,2,Vegetable Products,483371838,trade_b_401
+usa,ind,2011,3,Animal and Vegetable Bi-Products,54411953,trade_b_402
+usa,ind,2011,4,Foodstuffs,111948552,trade_b_403
+usa,ind,2011,5,Mineral Products,2636335731,trade_b_404
+usa,ind,2011,6,Chemical Products,3742692032,trade_b_405
+usa,ind,2011,7,Plastics and Rubbers,1027829850,trade_b_406
+usa,ind,2011,8,Animal Hides,18598945,trade_b_407
+usa,ind,2011,9,Wood Products,38012804,trade_b_408
+usa,ind,2011,10,Paper Goods,814417761,trade_b_409
+usa,ind,2011,11,Textiles,260292371,trade_b_410
+usa,ind,2011,12,Footwear and Headwear,8566409,trade_b_411
+usa,ind,2011,13,Stone And Glass,108096056,trade_b_412
+usa,ind,2011,14,Precious Metals,4310930860,trade_b_413
+usa,ind,2011,15,Metals,1282606426,trade_b_414
+usa,ind,2011,16,Machines,4616611112,trade_b_415
+usa,ind,2011,17,Transportation,566123508,trade_b_416
+usa,ind,2011,18,Instruments,1187904451,trade_b_417
+usa,ind,2011,19,Weapons,1012768,trade_b_418
+usa,ind,2011,20,Miscellaneous,83575988,trade_b_419
+usa,ind,2011,21,Arts and Antiques,11735811,trade_b_420
+usa,ind,2010,1,Animal Products,9794491,trade_b_421
+usa,ind,2010,2,Vegetable Products,418706666,trade_b_422
+usa,ind,2010,3,Animal and Vegetable Bi-Products,163737321,trade_b_423
+usa,ind,2010,4,Foodstuffs,133579141,trade_b_424
+usa,ind,2010,5,Mineral Products,1428292302,trade_b_425
+usa,ind,2010,6,Chemical Products,3182032645,trade_b_426
+usa,ind,2010,7,Plastics and Rubbers,910913251,trade_b_427
+usa,ind,2010,8,Animal Hides,13191747,trade_b_428
+usa,ind,2010,9,Wood Products,18015103,trade_b_429
+usa,ind,2010,10,Paper Goods,614458968,trade_b_430
+usa,ind,2010,11,Textiles,205691681,trade_b_431
+usa,ind,2010,12,Footwear and Headwear,6093858,trade_b_432
+usa,ind,2010,13,Stone And Glass,88848753,trade_b_433
+usa,ind,2010,14,Precious Metals,3844140871,trade_b_434
+usa,ind,2010,15,Metals,997983723,trade_b_435
+usa,ind,2010,16,Machines,4086679595,trade_b_436
+usa,ind,2010,17,Transportation,1665128760,trade_b_437
+usa,ind,2010,18,Instruments,1106494822,trade_b_438
+usa,ind,2010,19,Weapons,1133971,trade_b_439
+usa,ind,2010,20,Miscellaneous,88673595,trade_b_440
+usa,ind,2010,21,Arts and Antiques,19703972,trade_b_441
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
