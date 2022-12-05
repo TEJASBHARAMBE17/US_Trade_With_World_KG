@@ -99,48 +99,48 @@ def get_gdp_details(buyer, processed_year, app, dict_country, dict_country_rev):
             + ". "
             + text["Name"]
             + " had GDP of $"
-            + str(text["gdp_2020"])
-            + " in 2020 "
+            + str(text["gdp_2020"] / 1000000000)
+            + "B in 2020 "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2019"] / 1000000000)
+            + "B in 2019. "
             + text["Name"]
             + " had GDP of $"
-            + str(text["gdp_2019"])
-            + " in 2019. "
+            + str(text["gdp_2018"] / 1000000000)
+            + "B in 2018. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2017"] / 1000000000)
+            + "B in 2017. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2016"] / 1000000000)
+            + "B in 2016. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2015"] / 1000000000)
+            + "B in 2015. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2014"] / 1000000000)
+            + "B in 2014. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2013"] / 1000000000)
+            + "B in 2013. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2012"] / 1000000000)
+            + "B in 2012. "
+            + text["Name"]
+            + "B had GDP of $"
+            + str(text["gdp_2011"] / 1000000000)
+            + "B in 2011. "
             + text["Name"]
             + " had GDP of $"
-            + str(text["gdp_2018"])
-            + " in 2018. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2017"])
-            + " in 2017. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2016"])
-            + " in 2016. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2015"])
-            + " in 2015. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2014"])
-            + " in 2014. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2013"])
-            + " in 2013. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2012"])
-            + " in 2012. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2011"])
-            + " in 2011. "
-            + text["Name"]
-            + " had GDP of $"
-            + str(text["gdp_2010"])
-            + " in 2010. "
+            + str(text["gdp_2010"] / 1000000000)
+            + "B in 2010. "
         )
     return generated_gdp
 

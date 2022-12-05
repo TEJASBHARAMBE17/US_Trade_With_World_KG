@@ -23,7 +23,7 @@ class DataLoader:
                 [df, session.execute_write(self._load_test_data, country_id, "To")],
                 axis=0,
             )
-            df["fta_inforce"] = df["exports_year"].map(
+            df["fta_inforce"] = df["Trade Year"].map(
                 lambda x: 1 if x >= fta_year else 0
             )
             df["train"] = False
@@ -54,7 +54,7 @@ class DataLoader:
                     ]
                     for row in result
                 ],
-                columns=["trade_country", "seller_usa", "exports_year", "trade_value"],
+                columns=["trade_country", "seller_usa", "Trade Year", "trade_value"],
             )
             return df
         except ServiceUnavailable as exception:
@@ -72,7 +72,7 @@ class DataLoader:
                 [df, session.execute_write(self._get_new_years, country_id, "To")],
                 axis=0,
             )
-            # df['fta_inforce'] = df['exports_year'].map(lambda x: 1 if x >= fta_year else 0)
+            # df['fta_inforce'] = df['Trade Year'].map(lambda x: 1 if x >= fta_year else 0)
             df["train"] = False
             return df
 
@@ -105,7 +105,7 @@ class DataLoader:
                 columns=[
                     "trade_country",
                     "seller_usa",
-                    "exports_year",
+                    "Trade Year",
                     "trade_value",
                     "fta_inforce",
                 ],
@@ -125,7 +125,7 @@ def get_X_test(train, test):
     df_all = pd.concat(
         [
             pd.get_dummies(df[["trade_country"]].astype(str), drop_first=True),
-            df[["seller_usa", "fta_inforce", "exports_year", "train"]],
+            df[["seller_usa", "fta_inforce", "Trade Year", "train"]],
         ],
         axis=1,
     )
@@ -147,18 +147,18 @@ def get_test_data(country_id, fta_year):
 
 
 def show_prediction(df, pred, counter_country, fta_year):
-    full = df[["seller_usa", "exports_year", "trade_value"]].copy()
+    full = df[["seller_usa", "Trade Year", "trade_value"]].copy()
     full["pred"] = pred
     full["pred"] = full.apply(
-        lambda x: x["pred"] if x["exports_year"] >= fta_year else x["trade_value"],
+        lambda x: x["pred"] if x["Trade Year"] >= fta_year else x["trade_value"],
         axis=1,
     )
     full["status"] = "Non-FTA (history)"
-    result = full[["seller_usa", "exports_year", "trade_value", "status"]]
+    result = full[["seller_usa", "Trade Year", "trade_value", "status"]]
     full["status"] = "If FTA in Force (prediction)"
     full["trade_value"] = full["pred"]
     result = pd.concat(
-        [result, full[["seller_usa", "exports_year", "trade_value", "status"]]], axis=0
+        [result, full[["seller_usa", "Trade Year", "trade_value", "status"]]], axis=0
     )
     result = result[result["trade_value"] != 0]
 
@@ -167,7 +167,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             lambda x: True
             if x["status"] == "Non-FTA (history)"
             and x["seller_usa"] == 1
-            and x["exports_year"] >= fta_year
+            and x["Trade Year"] >= fta_year
             else False,
             axis=1,
         )
@@ -177,7 +177,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             lambda x: True
             if x["status"] != "Non-FTA (history)"
             and x["seller_usa"] == 1
-            and x["exports_year"] >= fta_year
+            and x["Trade Year"] >= fta_year
             else False,
             axis=1,
         )
@@ -187,7 +187,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             lambda x: True
             if x["status"] == "Non-FTA (history)"
             and x["seller_usa"] == 0
-            and x["exports_year"] >= fta_year
+            and x["Trade Year"] >= fta_year
             else False,
             axis=1,
         )
@@ -197,7 +197,7 @@ def show_prediction(df, pred, counter_country, fta_year):
             lambda x: True
             if x["status"] != "Non-FTA (history)"
             and x["seller_usa"] == 0
-            and x["exports_year"] >= fta_year
+            and x["Trade Year"] >= fta_year
             else False,
             axis=1,
         )
@@ -214,8 +214,8 @@ def show_prediction(df, pred, counter_country, fta_year):
 
     fig = px.line(
         result[result["seller_usa"] == 1],
-        x="exports_year",
-        y="trade_value",
+        x="Trade Year",
+        y="Trade Value",
         color="status",
         title="USA sells " + counter_country.upper() + " buys",
     )
@@ -225,8 +225,8 @@ def show_prediction(df, pred, counter_country, fta_year):
 
     fig = px.line(
         result[result["seller_usa"] == 0],
-        x="exports_year",
-        y="trade_value",
+        x="Trade Year",
+        y="Trade Value",
         color="status",
         title="USA buys " + counter_country.upper() + " sells",
     )
@@ -237,9 +237,9 @@ def show_prediction(df, pred, counter_country, fta_year):
 
 def make_test_data(df):
     df = df.append([df] * 1, ignore_index=True)
-    year_from = df.loc[0, "exports_year"]
-    year_to = df.loc[1, "exports_year"]
-    df["exports_year"] = [year_from, year_to, year_from + 1, year_to + 1]
+    year_from = df.loc[0, "Trade Year"]
+    year_to = df.loc[1, "Trade Year"]
+    df["Trade Year"] = [year_from, year_to, year_from + 1, year_to + 1]
     return df
 
 
@@ -266,12 +266,12 @@ def show_later_years_prediction(df_test, X_test, addition, pred, counter_country
     df_test["History"] = "History"
     X_test["History"] = "Prediction"
     df = pd.concat([df_test, X_test], axis=0).sort_values(
-        by=["seller_usa", "exports_year"]
+        by=["seller_usa", "Trade Year"]
     )
 
     fig = px.line(
         df[df["seller_usa"] == 1],
-        x="exports_year",
+        x="Trade Year",
         y="trade_value",
         color="History",
         title="USA sells " + counter_country.upper() + " buys",
@@ -282,7 +282,7 @@ def show_later_years_prediction(df_test, X_test, addition, pred, counter_country
 
     fig = px.line(
         df[df["seller_usa"] == 0],
-        x="exports_year",
+        x="Trade Year",
         y="trade_value",
         color="History",
         title="USA buys " + counter_country.upper() + " sells",
