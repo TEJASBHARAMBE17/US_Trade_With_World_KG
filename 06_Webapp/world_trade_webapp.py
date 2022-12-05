@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.figure_factory as ff
 import streamlit.components.v1 as components
 from PIL import Image
+from st_clickable_images import clickable_images
 
 # embed streamlit docs in a streamlit app
 
@@ -23,19 +24,53 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(
     ]
 )
 with tab1:
-    st.header("Overview")
-    st.balloons()
+    st.markdown("""""")
+    st.subheader("International World Trade Exploration and Prediction:")
+    # st.info(
+    #     "Data Visualization: Use this tab to visualize the complex world trade easily"
+    # )
+    # st.info(
+    #     "Q&A with KG: Use this tab to ask questions about the world trade to our app"
+    # )
+    # st.info("Prediction & Recommendation: Use this tab to predict the impact of FTA")
+    # st.info("Neo4j Graph: View our KG here")
 
-    st.info(
-        "Data Visualization: Use this tab to visualize the complex world trade easily"
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.markdown("**Data Visualization**")
+        st.image("../data/data_viz_img.png")
+
+    with col2:
+        st.markdown("**Q&A with KG**")
+        st.image("../data/q_a_img.png")
+
+    with col3:
+        st.markdown("**Prediction & Recommendation**")
+        st.image("../data/pred_img.png")
+
+    with col4:
+        st.markdown("**Neo4j Graph**")
+        st.image("../data/neo4j_img.png")
+
+    # image = Image.open("../data/globe2.jpeg")
+    # st.image(image, caption="Ontology")
+    st.markdown("""---""")
+    st.subheader("About our platform:")
+
+    st.markdown(
+        "- **We have built a tool to visualize the complex world trade easily and also, aligned it with the country related metrics such as GDP/population.**"
     )
-    st.info(
-        "Q&A with KG: Use this tab to ask questions about the world trade to our app"
+    st.markdown(
+        "- **One can use this platform to ask questions about the world trade to our app and to predict the future trades between countries.**"
     )
-    st.info("Prediction & Recommendation: Use this tab to predict the impact of FTA")
-    st.info("Neo4j Graph: View our KG here")
-    image = Image.open("../data/globe2.jpeg")
-    st.image(image, caption="Ontology")
+    st.markdown(
+        "- **The tool also recommends whether a country should go in FTA with some country or not and helps to predict the impact of FTA.**"
+    )
+    st.markdown(
+        "- **Additionally, the data could also be queried and visualized using the Knowledge Graph that we built.**"
+    )
+
 
 with tab2:
     st.header("Data Visualization")
@@ -47,7 +82,8 @@ with tab2:
 
     with st.form("form_visualization"):
 
-        col1, col2, col3, col4 = st.columns(4)
+        # col1, col2, col3, col4 = st.columns(4)
+        col1, col2 = st.columns(2)
 
         with col1:
             counter_country = st.selectbox(
@@ -62,15 +98,13 @@ with tab2:
                 value=(2010, 2018),
             )
 
-        with col3:
-            product_selected = st.selectbox(
-                "Product", df_trades["section_name"].unique()
-            )
+        # with col3:
+        product_selected = st.selectbox("Product", df_trades["section_name"].unique())
 
-        with col4:
-            st.write("")
-            st.write("")
-            submitted = st.form_submit_button("Submit")
+        # with col4:
+        st.write("")
+        st.write("")
+        submitted = st.form_submit_button("Submit")
 
         if submitted:
             counter_country = country_dict[counter_country.lower()][0].lower()
@@ -86,7 +120,7 @@ with tab3:
     st.header("Q&A with the World Trade KG")
     st.write("Methodology to Answer the Questions")
     st.markdown("**Template Questions:**")
-    st.warning(
+    st.info(
         """\n
         What was the GDP of United States in 2018?\n
         What products did US export from China by 1st jan 2020?\n

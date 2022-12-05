@@ -47,7 +47,7 @@ class VizApp:
                     ]
                     for row in result
                 ],
-                columns=["Trade Value", "Export From", "Export To", "Year"],
+                columns=["Trade Value", "Import From", "Export To", "Year"],
             )
         except ServiceUnavailable as exception:
             logging.error(
@@ -144,7 +144,7 @@ class VizApp:
         try:
             df = pd.DataFrame(
                 [[row["value"], row["name"]] for row in result],
-                columns=["Trade Value", "Export From"],
+                columns=["Trade Value", "Import From"],
             )
             return df
         except ServiceUnavailable as exception:
@@ -249,7 +249,7 @@ class VizApp:
                 [[row["value"], row["section"], row["name"]] for row in result],
                 columns=["Trade Value", "Section", "Country"],
             )
-            df["Status"] = "Export From"
+            df["Status"] = "Import From"
             return df
         except ServiceUnavailable as exception:
             logging.error(
@@ -293,23 +293,31 @@ class VizApp:
     #                        , axis=0)
     #         return df
 
-    def get_sections_exported_from(self, country_id, year_from, year_to):
+    def get_sections_exported_from(self, country_id, year_from, year_to, section):
         with self.driver.session(database="neo4j") as session:
             return session.execute_write(
-                self._get_sections_exported_from, country_id, year_from, year_to
+                self._get_sections_exported_from,
+                country_id,
+                year_from,
+                year_to,
+                section,
             )
 
     @staticmethod
-    def _get_sections_exported_from(tx, country_id, year_from, year_to):
+    def _get_sections_exported_from(tx, country_id, year_from, year_to, section):
         query = (
             "MATCH (year)<-[:tradedYear]-(trade)-[:tradedProduct]->(section) "
             "MATCH (trade)-[:exportedFrom]->(country) "
-            "WHERE year.year>=$year_from AND year.year<=$year_to AND country.countryID=$country_id "
+            "WHERE year.year>=$year_from AND year.year<=$year_to AND country.countryID=$country_id AND section.section=$section "
             "RETURN year.year as year, trade.tradedValue as value, section.section as section, country.name as name "
             "ORDER BY year"
         )
         result = tx.run(
-            query, country_id=country_id, year_from=year_from, year_to=year_to
+            query,
+            country_id=country_id,
+            year_from=year_from,
+            year_to=year_to,
+            section=section,
         )
         try:
             df = pd.DataFrame(
@@ -319,7 +327,7 @@ class VizApp:
                 ],
                 columns=["year", "Trade Value", "Section", "Country"],
             )
-            df["Status"] = "Export From"
+            df["Status"] = "Import From"
             return df
         except ServiceUnavailable as exception:
             logging.error(
@@ -329,23 +337,27 @@ class VizApp:
             )
             raise
 
-    def get_sections_exported_to(self, country_id, year_from, year_to):
+    def get_sections_exported_to(self, country_id, year_from, year_to, section):
         with self.driver.session(database="neo4j") as session:
             return session.execute_write(
-                self._get_sections_exported_to, country_id, year_from, year_to
+                self._get_sections_exported_to, country_id, year_from, year_to, section
             )
 
     @staticmethod
-    def _get_sections_exported_to(tx, country_id, year_from, year_to):
+    def _get_sections_exported_to(tx, country_id, year_from, year_to, section):
         query = (
             "MATCH (year)<-[:tradedYear]-(trade)-[:tradedProduct]->(section) "
             "MATCH (trade)-[:exportedTo]->(country) "
-            "WHERE year.year>=$year_from AND year.year<=$year_to AND country.countryID=$country_id "
+            "WHERE year.year>=$year_from AND year.year<=$year_to AND country.countryID=$country_id AND section.section=$section "
             "RETURN year.year as year, trade.tradedValue as value, section.section as section, country.name as name "
             "ORDER BY year"
         )
         result = tx.run(
-            query, country_id=country_id, year_from=year_from, year_to=year_to
+            query,
+            country_id=country_id,
+            year_from=year_from,
+            year_to=year_to,
+            section=section,
         )
         try:
             df = pd.DataFrame(
@@ -407,43 +419,58 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
     trade_data = app.get_trade_value(country_id, year_from, year_to)
     trade_data["Status"] = trade_data.apply(
         lambda x: "Export To " + x["Export To"]
-        if x["Export From"] == "United States"
-        else "Export From " + x["Export From"],
+        if x["Import From"] == "United States"
+        else "Import From " + x["Import From"],
         axis=1,
     )
     data_gdp = app.get_gdp(country_id, year_from, year_to)
-    st.write(f"{country_name} GDP")
-    fig1 = px.line(data_gdp, x="Year", y="GDP", color="Country")
-    st.plotly_chart(fig1, use_container_width=True)
-    st.write(f" Trade Value: {country_name} vs. US")
-    fig2 = px.line(trade_data, x="Year", y="Trade Value", color="Status")
-    st.plotly_chart(fig2, use_container_width=True)
 
+    # st.subheader(f"GDP US vs {country_name}")
+    st.subheader(f"{country_name} GDP")
+    fig1 = px.line(data_gdp, x="Year", y="GDP", color="Country")
+    fig1.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig1.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
+    st.plotly_chart(fig1, use_container_width=True)
+    st.markdown("""---""")
     ### Graph 2 ####
     top_exported_from = app.get_top_exported_from(country_id, top, year_from, year_to)
     top_exported_to = app.get_top_exported_to(country_id, top, year_from, year_to)
-    st.write(f"Top {top} Countries the US Imported from")
+    st.subheader(f"Top {top} Countries the US Imported from")
     fig1 = px.bar(
         top_exported_from,
-        x="Export From",
+        x="Import From",
         y="Trade Value",
         text="Trade Value",
         text_auto=True,
         height=400,
     )
+    fig1.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
     st.plotly_chart(fig1, use_container_width=True)
-    st.write(f"Top {top} Countries the US Imported to")
+    # st.markdown("""---""")
+
+    st.subheader(f"Top {top} Countries the US Exported to")
     fig2 = px.bar(
         top_exported_to, x="Export To", y="Trade Value", text="Trade Value", height=400
     )
+    fig2.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
     st.plotly_chart(fig2, use_container_width=True)
+    st.markdown("""---""")
+
+    st.subheader(f" Trade Value: {country_name} vs. US")
+    fig2 = px.line(trade_data, x="Year", y="Trade Value", color="Status")
+    fig2.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig2.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
+    st.plotly_chart(fig2, use_container_width=True)
+    st.markdown("""---""")
 
     ### Graph 3 ####
     sections_sum = app.get_sections_sum(country_id, year_from, year_to)
     # sections = app.get_sections(country_id, year_from, year_to)
-    sections_from = app.get_sections_exported_from(country_id, year_from, year_to)
-    sections_to = app.get_sections_exported_to(country_id, year_from, year_to)
-    st.write(f"Trade Value Import from {country_name} vs. Export to {country_name}")
+    sections_from = app.get_sections_exported_from(
+        country_id, year_from, year_to, product
+    )
+    sections_to = app.get_sections_exported_to(country_id, year_from, year_to, product)
+    st.subheader(f"Trade Value Import from {country_name} vs. Export to {country_name}")
     fig1 = px.bar(
         sections_sum,
         x="Trade Value",
@@ -455,14 +482,26 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
         height=1000,
         text_auto=True,
     )
+    fig1.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig1.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
     st.plotly_chart(fig1, use_container_width=True)
-    st.write(f"Trade Value by Product Import from {country_name}")
-    fig2 = px.line(sections_from, x="year", y="Trade Value", color="Section")
-    st.plotly_chart(fig2, use_container_width=True)
-    st.write(f"Trade Value by Product Export to {country_name}")
-    fig3 = px.line(sections_to, x="year", y="Trade Value", color="Section")
-    st.plotly_chart(fig3, use_container_width=True)
+    st.markdown("""---""")
 
+    st.subheader(
+        f"Trade Value of the Seclected Product: {product.upper()} - USA vs. {country_name}"
+    )
+    fig2 = px.line(
+        pd.concat([sections_from, sections_to], axis=0),
+        x="year",
+        y="Trade Value",
+        color="Status",
+        height=500,
+    )
+    # fig2.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
+    fig2.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig2.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
+    st.plotly_chart(fig2, use_container_width=True)
+    st.markdown("""---""")
     ### Graph 4 ####
     df_graph = app.get_items(product)
     nodes = (
@@ -486,7 +525,7 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
     nx.draw_networkx_labels(network, pos, font_size=10)
 
     plt.axis("off")
-    st.write(f"Product Item Detail: {product}")
+    st.subheader(f"Product Item Detail: {product}")
     st.pyplot(fig)
-
+    st.markdown("""---""")
     app.close()
