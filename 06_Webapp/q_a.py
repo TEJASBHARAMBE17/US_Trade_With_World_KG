@@ -250,7 +250,7 @@ def generate_country_trades(buyer, processed_year, app, dict_country, dict_count
             generated_country_trades += (
                 " "
                 + text["Buyer"]
-                + " exported from "
+                + " imported from "
                 + text["Seller"]
                 + " worth $"
                 + str(text["Worth"])
