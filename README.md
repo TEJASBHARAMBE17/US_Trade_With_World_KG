@@ -7,4 +7,3 @@
 2. Project Summary -
 * [Presentation](https://github.com/TEJASBHARAMBE17/US_Trade_With_World_KG/blob/main/Project_Summary_International_Trade.pptx)
 * [Video Demo](https://youtu.be/D8zg9OuqXWc)
-* [Report](https://github.com/TEJASBHARAMBE17/US_Trade_With_World_KG/blob/main/DSCI%20558%20Project%20Report.pdf)
