@@ -123,11 +123,11 @@ with tab3:
     st.info(
         """\n
         What was the GDP of United States in 2018?\n
-        What products did US import from China by 1st jan 2020?\n
+        What products did US import from Germany by jan 1st 2020?\n
         What does Machine contain?\n
         From whom did U.S export in 2020?\n
         With whom does U.S has FTA with?\n
-        How much metals did USA export from China in 1st Jan 2010?\n
+        How much Paper Goods did USA import from Germany in Jan 1st 2010?\n
     """
     )
 
@@ -234,10 +234,10 @@ with tab5:
 
 with tab2:
     st.header("Neo4j graph")
+    image = Image.open("../data/ontology.png")
+    st.image(image, caption="Ontology")
     components.iframe(
         "https://browser.neo4j.io/?connectURL=neo4j%2Bs%3A%2F%2Fneo4j%4050728551.databases.neo4j.io%2F&_ga=2.81391250.408191067.1668294782-2032509330.1661934579",
         height=800,
     )
-    image = Image.open("../data/ontology.png")
 
-    st.image(image, caption="Ontology")

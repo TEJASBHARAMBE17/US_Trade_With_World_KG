@@ -163,7 +163,7 @@ def generate_c2c_trades(
                 + str(year)
                 + ", "
                 + dict_country[buyer]
-                + " exported the following products from "
+                + " imported the following products from "
                 + dict_country[seller]
                 + ":  "
                 + ",".join(str(item) for item in line)
@@ -178,7 +178,7 @@ def generate_c2c_trades(
             generated_c2c_trades += (
                 " "
                 + text["Buyer"]
-                + " exported from "
+                + " imported from "
                 + text["Seller"]
                 + " worth $"
                 + str(text["Worth"])
@@ -196,7 +196,7 @@ def generate_c2c_trades(
             generated_c2c_trades += (
                 " "
                 + text["Buyer"]
-                + " exported "
+                + " imported "
                 + text["Product"]
                 + " from "
                 + text["Seller"]
@@ -322,7 +322,7 @@ def question_answer(question, app, dict_country, dict_country_rev):
             return (
                 question,
                 context,
-                qa_model(question=question, context=context, top_k=5),
+                qa_model(question=question, context=context, top_k=10),
             )
         else:
             return question, context, qa_model(question=question, context=context)

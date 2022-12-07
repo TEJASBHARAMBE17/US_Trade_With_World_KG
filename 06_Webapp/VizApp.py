@@ -460,6 +460,7 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
     fig2 = px.line(trade_data, x="Year", y="Trade Value", color="Status")
     fig2.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
     fig2.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig2.update_yaxes(range=[0, trade_data["Trade Value"].max()*1.05])
     st.plotly_chart(fig2, use_container_width=True)
     st.markdown("""---""")
 
@@ -490,8 +491,9 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
     st.subheader(
         f"Trade Value of the Seclected Product: {product.upper()} - USA vs. {country_name}"
     )
+    df_temp = pd.concat([sections_from, sections_to], axis=0)
     fig2 = px.line(
-        pd.concat([sections_from, sections_to], axis=0),
+        df_temp,
         x="year",
         y="Trade Value",
         color="Status",
@@ -500,6 +502,7 @@ def run_visualization(country_name, country_id, year_from, year_to, product):
     # fig2.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
     fig2.update_xaxes(showline=True, linewidth=2, gridcolor="Gray")
     fig2.update_yaxes(showline=True, linewidth=2, gridcolor="Gray")
+    fig2.update_yaxes(range=[0, df_temp["Trade Value"].max()*1.05])
     st.plotly_chart(fig2, use_container_width=True)
     st.markdown("""---""")
     ### Graph 4 ####
