@@ -9,7 +9,7 @@
 * [Video Demo](https://youtu.be/D8zg9OuqXWc)
 -----------------------------------------------------------
 ## Project Report
-1. Goal and Research Question
+### 1. Goal and Research Question
 We built a knowledge graph about international trade between the US and all the countries in the world.
 KG in this domain was necessary as the US is connected with the world in the most complex way, and
 world trade is happening 24/7; it generates a lot of data that is messy and unstructured. Also, it is hard
@@ -26,7 +26,7 @@ prediction of near-future trade between 2 countries, the recommendation system f
 Trade Agreement (FTA) between countries, and a Q&A module to answer world trade-related
 questions.
 
-2. Datasets
+### 2. Datasets
 This KG will contain the data crawled from the following sources:
 ⬡ https://oec.world/ ([World Trade Data - Trade, Countries, Products, Categories, Sections],
 unstructured, format - charts, text & links, ~35M records )
