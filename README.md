@@ -1,4 +1,5 @@
 # US_Trade_With_World_KG
+Team Members - Soojung Choi, Tejas Bharambe
 
 1. Project Proposal - 
 * [Proposal](https://github.com/TEJASBHARAMBE17/US_Trade_With_World_KG/blob/main/Project%20Proposal.pdf)
