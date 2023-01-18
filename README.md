@@ -45,7 +45,8 @@ technique of Scrapy to identify this page loading issue and took measures such a
 there were 35M records that were extracted from these pages, and in order to evaluate the correctness
 of this data, we pulled the summary numbers from the website itself and compared the sum totals.
 Additionally, we evaluated them by using spot checks and efficient exception handling.
-### 3.2 Information Extraction The text/link data needed further processing to extract the exact information
+### 3.2 Information Extraction:
+The text/link data needed further processing to extract the exact information
 that we needed. We used rule-based information extraction mechanisms with a combination of lexical
 and syntactical rules. We leveraged spaCy’s tokenizer, parser, named entity recognition, part-of-speech
 tagging, and dependency parsing heavily to form the rules and extract information like ranks, ECI, etc.
@@ -54,7 +55,8 @@ dependency noun and verbs extraction for the question-answer module. One challen
 manually identify the type of patterns and keywords in the sentences. And assessing the quality of the
 information extraction was a major challenge & we achieved it by continuously adding, and enhancing
 our rules, and checking if the extracted data matched accurately to a set of pre-determined patterns.
-### 3.3 Entity Linking (Similarity Measures): For building KG, country-related information was common in all
+### 3.3 Entity Linking (Similarity Measures): 
+For building KG, country-related information was common in all
 the extracted files. We linked the country names using a blocking technique based on the first 2
 characters and used Jaro and Dice similarity measures for entity linking after heavily testing with the
 available similarity measures. We created a truth file for this and got an accuracy score of 97.3%. We
@@ -63,21 +65,25 @@ Republic of Korea, and North Korea is the Democratic People’s Republic of Kore
 to the alternate country names page on Wikipedia and made our training data more robust as the
 countries were critical for our KG. Additionally, along with country names, we used Jaro similarity to link
 the product names and year with the entities in KG from the questions that the users can ask.
-### 3.4 Ontology - Designing an efficient ontology was of utmost importance as we had more than 35M
+### 3.4 Ontology:
+Designing an efficient ontology was of utmost importance as we had more than 35M
 records. We ensured that we didn’t duplicate the country-country combinations by adding a Trade ID to
 each of the trade data. Similarly, we added the FTA id for FTA records too. Initially, the ontology was too
 complicated and had a lot of repetitive data but we simplified it by redesigning it and adding properties
 to the nodes.
-### 3.5 KG Quality assessment: To ensure the high quality of the KG, we used a manual approach with a
+### 3.5 KG Quality assessment: 
+To ensure the high quality of the KG, we used a manual approach with a
 mix of subjective and objective criteria to verify the functional and non-functional requirements of KG.
 We cross-verified the counts of each relation, relation type, label, property, and node from KG with that
 of the raw data & also checked the sum totals for each country and product-based combinations.
-### 3.6 Data Visualization We fetched the data from the Neo4j database with 70k nodes and 270
+### 3.6 Data Visualization: 
+We fetched the data from the Neo4j database with 70k nodes and 270
 relationships using Cypher queries and Python neo4j driver. We built a visualization page using the
 Plotly library to show the data at the country level, such as GDP comparison, import/ export value
 comparison, yearly import/export value between countries, and the value by trade categories, and at
 the product level, such as yearly product trade value and section-category-item tree.
-### 3.7 Question and Answering: We used a template-based question-answering module. As mentioned
+### 3.7 Question and Answering: 
+We used a template-based question-answering module. As mentioned
 above, we performed information extraction and entity linking on the questions that users asked to
 extract and link country, products, year, and verbs. The question was then updated based on the linked
 entities from the KG. Based on that, the context was generated which was to be used for answering the
@@ -86,7 +92,8 @@ the help of the hugging face library. We tested various other algorithms like �
 google’s “tapas-base-finetuned-wtq”. However, after much trial and testing of the questions, we realized
 the distilbert algorithm gives more accurate answers based on the probability scores generated using a
 softmax from the start and end logits of the matched token.
-### 3.8 Prediction & Recommendation For prediction, we asked questions like how the export and import
+### 3.8 Prediction & Recommendation: 
+For prediction, we asked questions like how the export and import
 trade values would have been different if the US had FTA in force with a certain country years ago. And
 what will be the trade value like in the near future? To answer the questions, we trained models using
 scikit-learn library. We tried Linear Regression, Lasso, Ridge, SVM, and Random Forest models.
