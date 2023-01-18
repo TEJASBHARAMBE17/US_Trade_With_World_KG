@@ -28,9 +28,9 @@ questions.
 
 ### 2. Datasets
 This KG will contain the data crawled from the following sources:
-⬡ https://oec.world/ ([World Trade Data - Trade, Countries, Products, Categories, Sections],
+* https://oec.world/ ([World Trade Data - Trade, Countries, Products, Categories, Sections],
 unstructured, format - charts, text & links, ~35M records )
-⬡ https://data.worldbank.org/ ([GDP, Population], structured, format - tabular, ~13.5k records)
-⬡ www.state.gov/trade-agreements/existing-u-s-trade-agreements/ (Free Trade Agreement Data,
+* https://data.worldbank.org/ ([GDP, Population], structured, format - tabular, ~13.5k records)
+* www.state.gov/trade-agreements/existing-u-s-trade-agreements/ (Free Trade Agreement Data,
 structured, format - tabular, 20-30 records)
-⬡ https://country-code.cl/ (Country Codes, structured, format - tabular, ~250 records)
+* https://country-code.cl/ (Country Codes, structured, format - tabular, ~250 records)
